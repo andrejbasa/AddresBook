@@ -1,0 +1,61 @@
+@using AddresBook.Models
+@model  AddresBook.Models.Contact
+@{
+  ViewBag.Title = "Edit";
+}
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<div ng-app="AppController">
+  <div ng-controller="EditController">
+  <form class="was-validated" style="position:center">
+    <div class="form-group">
+      <input type="hidden" name="Id" placeholder="@Model.Id" ng-model="Id" />
+      <label for="fname">First name:</label>
+      <input type="text" class="form-control" id="fname" value="@Model.FirstName" ng-model="fname" name="fname" required>
+
+    </div>
+    <div class="form-group">
+      <label for="lname">Last name:</label>
+      <input type="text" class="form-control" id="lname" value="@Model.LastName " ng-model="lname" name="lname" required>
+
+    </div>
+    <div class="form-group">
+      <label for="addr">Address:</label>
+      <input type="text" class="form-control" id="addr" value="@Model.Address" ng-model="addr" name="addr" required>
+
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" class="form-control" id="city" value="@Model.City"  ng-model="city" name="city" required>
+
+    </div>
+    <div class="form-group">
+      <label for="zip">Zip code:</label>
+      <input type="number" class="form-control" id="zip" value="@Model.ZipCode"  ng-model="zip" name="zip" required>
+
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone number:</label>
+      <input type="text" class="form-control" id="phone" value="@Model.PhoneNum" ng-model="phone" name="phone" required>
+
+    </div>
+    <button ng-click="save()" class="btn btn-primary">Save changes</button>
+    
+  </form>
+</div>
+</div>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/FrontEnd/AngularScripts/app.js"></script>
+<script src="~/FrontEnd/AngularScripts/Controller.js"></script>
+<script src="~/FrontEnd/AngularScripts/EditController.js"></script>
+
+
+
+
+
+
